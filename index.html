@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="style.css">
+    
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>A simple counter application</title>
+
+
+</head>
+
+<body>
+    <button id="decrement">-</button> <span id="counter">0</span>
+    <button id="increment">+</button>
+
+    let incrementButton = document.querySelector("#increment"); 
+let decrementButton = document.querySelector("#decrement"); 
+let counter = document.querySelector("#counter"); 
+
+incrementButton.addEventListener("click", function() {
+    console.log("+ button clicked");
+  });
+
+  incrementButton.addEventListener("click", function() {
+    console.log("+ button clicked");
+    
+    let newCounterValue = Number(counter.innerHTML) + 1;
+  })
+
+  incrementButton.addEventListener("click", function() {
+    console.log("+ button clicked");
+  
+    let newCounterValue = parseInt(counter.innerHTML) + 1;
+   
+    counter.innerHTML = newCounterValue;
+  })
+
+
+  incrementButton.addEventListener("click", function() {
+    console.log("+ button clicked");
+    
+    let newCounterValue = parseInt(counter.innerHTML) + 1;
+   
+    if(newCounterValue >= 10) {
+      counter.style.color = "red";
+    }
+  
+    counter.innerHTML = newCounterValue;
+  })
+
+  decrementButton.addEventListener("click", function() {
+    console.log("- button clicked");
+  })
+
+
+decrementButton.addEventListener("click", function() {
+    console.log("- button clicked");
+
+    let newCounterValue = parseInt(counter.innerHTML) - 1;
+})
+
+decrementButton.addEventListener("click", function() {
+    console.log("- button clicked");
+
+    let newCounterValue = parseInt(counter.innerHTML) - 1;
+
+    counter.innerHTML = newCounterValue;
+})
+
+decrementButton.addEventListener("click", function(){
+    console.log("- button clicked");
+
+    let newCounterValue = parseInt(counter.innerHTML) - 1;
+
+    if (counter.innerHTML > 0) {
+        counter.innerHTML = newCounterValue;
+      }
+    })
+
+    decrementButton.addEventListener("click", function() {
+        console.log("- button clicked");
+
+        let newCounterValue = parseInt(counter.innerHTML) - 1;
+
+        if(newCounterValue < 10){
+            counter.style.color = "black";
+          }
+
+          if (counter.innerHTML > 0) {
+            counter.innerHTML = newCounterValue;
+          }
+        })
+
+    <script src=" ./assets/javascript/counter.js"></script>
+</body>
+
+</html>
